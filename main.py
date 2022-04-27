@@ -21,9 +21,15 @@ class TeacherModel(BaseModel):
     __tablename__ = "teacher"
 
     id = Column(BigInteger, Sequence('all_id_seq'), primary_key=True)
+    degree = Column(String)
     name = Column(String)
     surname = Column(String)
     department = Column(String)
     mail = Column(String)
     phone_number = Column(Integer)
 
+class StudyGroupModel(BaseModel):
+    __tablename__ = "study_group"
+
+    faculty = Column(String)
+    grade = Column(Integer)
